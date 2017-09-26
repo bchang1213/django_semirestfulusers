@@ -10,10 +10,20 @@
 			<th>Name</th>
 			<th>E-mail</th>
 			<th>Join Date</th>
-			<th>Year</th>
 			<th>Options</th>
 		</tr>
-
+		{% for user in users %}
+		<tr>
+			<td><a href="/{{ user.id }}">{{ user.name }}</a></td>
+			<td>{{ user.email }}</td>
+			<td>{{ user.created_at }}</td>
+			<td>
+				<a href="/{{ user.id }}">Show</a>
+				<a href="/{{ user.id }}/edit">Edit</a>
+				<a href="/{{ user.id }}/delete">Delete</a>
+			</td>
+		</tr>
+		{% endfor %}
 	</table>
 	<a href="/new">Create New User</a>
 </body>

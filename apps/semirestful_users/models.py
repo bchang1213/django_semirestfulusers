@@ -26,4 +26,4 @@ class User(models.Model):
 	updated_at = models.DateTimeField(auto_now = True)
 	objects = UserManager()
 	def __repr__(self):
-		return ("<User object:{} {} {}>".format(self.id, self.name, self.email))
+		return ("<User object: id:{} {} {}>".format(self.id, self.name, self.email))

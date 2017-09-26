@@ -5,13 +5,11 @@
 	<title>User Info</title>
 </head>
 <body>
-
-	<h1>User {{all_friends.id }}</h1>
-	<p>Full Name: {{ all_friends.name }}</p>
-	<p>E-mail: {{ all_friends.e-mail }}</p>
-	<p>Join Date: {{ all_friends.join_date }}</p>
-	<p>Join Year: {{ all_friends.year }}</p>
-	<a href="/{{ all_friends.id }}/edit">Edit</a>
-	<a href="/{{ all_friends.id }}/delete">Delete</a>
+	<h1>User {{users.id }}</h1>
+	<p>Full Name: {{ users.name }}</p>
+	<p>E-mail: {{ users.email }}</p>
+	<p>Join Date: {{ users.created_at }}</p>
+	<a href="/{{ users.id }}/edit">Edit</a>
+	<a href="/{{ users.id }}/delete">Delete</a>
 </body>
 </html>
